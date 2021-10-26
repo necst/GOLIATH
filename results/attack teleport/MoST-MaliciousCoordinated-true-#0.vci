@@ -1,0 +1,171 @@
+file 38639 1604349716                                           
+version 2
+run MoST-MaliciousCoordinated-1-20201102-19:15:24-7576
+attr configname MoST-MaliciousCoordinated
+attr datetime 20201102-19:15:24
+attr experiment MoST-MaliciousCoordinated
+attr inifile omnetpp.ini
+attr iterationvars $0=true
+attr iterationvarsf true-
+attr measurement $0=true
+attr network CoordinatedAttackScenario
+attr processid 7576
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 1
+attr seedset 1
+param *.playgroundSizeX 10500m
+param *.playgroundSizeY 7000m
+param *.playgroundSizeZ 50m
+param *.manager.launchConfig "xmldoc(\"most.launchd.xml\")"
+param *.manager.connectAt 14400s
+param *.manager.firstStepAt 20000s
+param *.manager.updateInterval 250ms
+param *.manager.moduleType "\"passenger1=org.car2x.veins.subprojects.simulator.nodes.Vehicle passenger2a=org.car2x.veins.subprojects.simulator.nodes.Vehicle passenger2b=org.car2x.veins.subprojects.simulator.nodes.Vehicle passenger3=org.car2x.veins.subprojects.simulator.nodes.Vehicle passenger4=org.car2x.veins.subprojects.simulator.nodes.Vehicle *=org.car2x.veins.subprojects.simulator.nodes.NonPartakingVehicle\""
+param *.manager.moduleName "\"passenger1=node passenger2a=node passenger2b=node passenger3=node passenger4=node *=other\""
+param *.manager.moduleDisplayString "\"passenger1='i=veins/node/car;is=vs' passenger2a='i=veins/node/car;is=vs' passenger2b='i=veins/node/car;is=vs' passenger3='i=veins/node/car;is=vs' passenger4='i=veins/node/car;is=vs' *='i=veins/node/bicycle;is=vs'\""
+param *.manager.secondModuleType "\"passenger1=org.car2x.veins.subprojects.simulator.nodes.Vehicle passenger2a=org.car2x.veins.subprojects.simulator.nodes.Vehicle passenger2b=org.car2x.veins.subprojects.simulator.nodes.Vehicle passenger3=org.car2x.veins.subprojects.simulator.nodes.Vehicle passenger4=org.car2x.veins.subprojects.simulator.nodes.Vehicle *=org.car2x.veins.subprojects.simulator.nodes.NonPartakingVehicle\""
+param *.rsuPlacer.rows 20
+param *.rsuPlacer.cols 20
+param *.rsuPlacer.rsuDisplayString "\"i=veins/node/cone;is=vs\""
+param *.node2[*].app.blockchain.validatorModule "\"org.car2x.veins.subprojects.simulator.modules.validation.PlausibilityValidation\""
+param *.node2[*].app.generatorModule "\"org.car2x.veins.subprojects.simulator.modules.transactions.OffsetTransactionGenerator\""
+param *.node2[*].app.transactionGenerator.answerBack true
+param *.node2[*].app.transactionGenerator.changeOffset true
+param *.node2[*].app.transactionGenerator.transactionsPerTurn 4
+param *.**.app.blockchain.statusUpdateModule "\"org.car2x.veins.subprojects.simulator.modules.status.FixedReward\""
+param *.**.app.transactionGenerator.maxOffset 6000m
+param *.**.app.transactionGenerator.minOffset 4500m
+param *.manager.vehicleCap 1500
+param *.manager.ratio 0.05
+param *.**.app.transactionGenerator.range 15m
+param *.**.wave.range 15m
+param *.logger.logFile "\"results/MoST-MaliciousCoordinated-true--1.blockchain.log\""
+param *.addressTable.logFile "\"results/MoST-MaliciousCoordinated-true--1.addresses.log\""
+param *.maliciousNodes 0
+param *.nodePlacer.x 500
+param *.nodePlacer.y 500
+param *.**.app.blockchain.statusUpdater.maxReward 4096
+param *.**.app.blockchain.statusUpdater.reward 256
+param *.**.app.blockchain.statusUpdater.penalty 512
+param *.**.app.blockchain.statusUpdater.startingReward 64
+param *.**.app.blockchain.blockValidator.decayRate 0.3
+param *.**.app.blockchain.blockValidator.varianceWeight 0.67
+param *.**.app.blockchain.blockValidator.maxConflicts 2
+param *.**.app.blockchain.blockchain.storedChainLength 10
+param *.**.app.blockchain.blockValidator.depth 3
+param *.**.app.blockchain.blockValidator.threshold 0.1
+param *.**.app.transactionPeriod 5s
+param *.manager.secondModuleType "\"org.car2x.veins.subprojects.simulator.nodes.Vehicle\""
+param *.manager.ratio 0.1
+param *.rsuPlacer.rows 16
+param *.rsuPlacer.cols 16
+param *.rsuPlacer.rsuDisplayString "\"i=veins/node/cone;is=vs\""
+param *.**.app.blockchain.statusUpdater.rsuStartingReward 2048
+param *.**.app.blockchain.statusUpdater.startingReward 1024
+param *.**.app.blockchain.statusUpdater.reward 512
+param *.**.app.blockchain.statusUpdater.penalty 2048
+param *.**.app.blockchain.statusUpdater.maxReward 4096
+param *.**.app.blockchain.consensusModule "\"org.car2x.veins.subprojects.simulator.modules.consensus.BaseVotingModel\""
+param *.**.app.blockchain.filterModule "\"org.car2x.veins.subprojects.simulator.modules.blocks.SimpleFilter\""
+param *.**.app.blockchain.harvesterModule "\"org.car2x.veins.subprojects.simulator.modules.harvesting.DeterministicHarvester\""
+param *.**.app.blockchain.statusUpdateModule "\"org.car2x.veins.subprojects.simulator.modules.status.FixedReward\""
+param *.**.app.blockchain.consensusModel.harvesters 3
+param *.**.app.blockchain.consensusModel.faultTolerance 6
+param *.**.app.blockchain.consensusModel.timeout 3s
+param *.**.app.transactionPeriod 1s
+param *.**.app.transactionGenerator.range 40m
+param *.**.app.applicationModule "\"org.car2x.veins.subprojects.simulator.modules.application.TestApplication\""
+param *.node[*].app.blockchain.validatorModule "\"org.car2x.veins.subprojects.simulator.modules.validation.PlausibilityValidation\""
+param *.node[*].app.generatorModule "\"org.car2x.veins.subprojects.simulator.modules.transactions.ValidTransactionGenerator\""
+param *.node2[*].app.blockchain.validatorModule "\"org.car2x.veins.subprojects.simulator.modules.validation.SelfishValidator\""
+param *.node2[*].app.generatorModule "\"org.car2x.veins.subprojects.simulator.modules.transactions.MimicTransactionGenerator\""
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.node[*].veinsmobility.accidentCount 0
+param *.node[*].veinsmobility.accidentStart 0s
+param *.node[*].veinsmobility.accidentDuration 0s
+param *.node2[*].veinsmobility.x 0
+param *.node2[*].veinsmobility.y 0
+param *.node2[*].veinsmobility.z 0
+param *.node2[*].veinsmobility.setHostSpeed false
+param *.node2[*].veinsmobility.accidentCount 0
+param *.node2[*].veinsmobility.accidentStart 0s
+param *.node2[*].veinsmobility.accidentDuration 0s
+param *.RSU[*].app.blockchain.validatorModule "\"org.car2x.veins.subprojects.simulator.modules.validation.PlausibilityValidation\""
+param *.RSU[*].app.generatorModule "\"org.car2x.veins.subprojects.simulator.modules.transactions.ValidTransactionGenerator\""
+param *.RSU[*].app.blockchain.blockchain.downloadAtStart false
+param *.playgroundSizeX 2500m
+param *.playgroundSizeY 2500m
+param *.playgroundSizeZ 50m
+param *.annotations.draw true
+param *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"erlangen.launchd.xml\")"
+param *.manager.moduleType "\"org.car2x.veins.subprojects.simulator.nodes.Vehicle\""
+param *.manager.secondModuleType "\"org.car2x.veins.subprojects.simulator.nodes.Vehicle\""
+param *.manager.ratio 0.0
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 2600m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.wave.range 40m
+param *.**.wave.speed 6Gbps
+param *.**.inet.speed 10Gbps
+param *.**.app.blockchain.blocksize 50000
+param *.**.app.blockchain.blocktime 60s
+param *.**.app.blockchain.blockValidator.maxSpeed 130kmph
+param *.logger.logFile "\"results/MoST-MaliciousCoordinated-1.blockchain.log\""
+param *.addressTable.logFile "\"results/MoST-MaliciousCoordinated-1.addresses.log\""
+param *.RSU[*].app.blockchain.blockchain.downloadAtStart false
+param *.**.app.blockchain.consensusModule "\"org.car2x.veins.subprojects.simulator.modules.consensus.TrustedEnvironment\""
+param *.**.app.blockchain.filterModule "\"org.car2x.veins.subprojects.simulator.modules.blocks.SimpleFilter\""
+param *.**.app.blockchain.harvesterModule "\"org.car2x.veins.subprojects.simulator.modules.harvesting.DeterministicHarvester\""
+param *.**.app.blockchain.statusUpdateModule "\"org.car2x.veins.subprojects.simulator.modules.status.FixedReward\""
+param *.**.app.blockchain.validatorModule "\"org.car2x.veins.subprojects.simulator.modules.validation.PlausibilityValidation\""
+param *.**.app.generatorModule "\"org.car2x.veins.subprojects.simulator.modules.transactions.ValidTransactionGenerator\""
+param *.**.app.applicationModule "\"org.car2x.veins.subprojects.simulator.modules.application.TestApplication\""
+param *.**.app.transactionPeriod 1s
+param *.**.app.transactionGenerator.range 40m
+param *.**.app.blockchain.consensusModel.faultTolerance 6
+param *.**.app.blockchain.consensusModel.timeout 2s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.node[*].veinsmobility.accidentCount 0
+param *.node[*].veinsmobility.accidentStart 0s
+param *.node[*].veinsmobility.accidentDuration 0s
+
+vector 0 CoordinatedAttackScenario.logger TotalReputationAverage ETV
+vector 1 CoordinatedAttackScenario.logger ActiveType1ReputationAverage ETV
+vector 2 CoordinatedAttackScenario.logger ActiveType2ReputationAverage ETV
+vector 3 CoordinatedAttackScenario.logger NumberOfNodes ETV
+vector 4 CoordinatedAttackScenario.logger NumberOfActiveType1Nodes ETV
+vector 5 CoordinatedAttackScenario.logger NumberOfActiveType2Nodes ETV
+vector 6 CoordinatedAttackScenario.logger NumberOfActiveNodes ETV
+vector 7 CoordinatedAttackScenario.logger NumberOfAcceptableTransactions ETV
+vector 8 CoordinatedAttackScenario.logger NumberOfPlausibleTransactions ETV
+vector 9 CoordinatedAttackScenario.logger NumberOfAcceptedType2Transactions ETV
+vector 10 CoordinatedAttackScenario.logger NumberOfUnacceptedType1Transactions ETV
+vector 11 CoordinatedAttackScenario.logger TotalTransactions ETV
+vector 12 CoordinatedAttackScenario.logger Type2Transactions ETV
+0	9919 2745 2 124050961 20000 23601.294114572415 61 37.037589112119 2048 48978.378604321 45500194.632857
+1	12664 2758 2 124050961 20000 23601.294114572415 61 57.097535934292 2621.7966804979 90423.753108231 152209397.21212
+2	15422 2049 2 124050961 20000 23601.294114572415 61 0 87.510204081633 312.64591921359 15455.665860658
+3	17471 2101 2 124050961 20000 23601.294114572415 61 400 1884 111588 206678828
+4	19572 2082 2 124050961 20000 23601.294114572415 61 400 1030 60228 59835772
+5	21654 1979 2 124050961 20000 23601.294114572415 61 0 55 3200 171090
+6	23633 2101 2 124050961 20000 23601.294114572415 61 400 1078 63428 66390796
+7	25734 2151 2 124050961 20000 23601.294114572415 61 24 37025 1460020 39444078932
+8	27885 2162 2 124050961 20000 23601.294114572415 61 5052 49461 2516209 105702790375
+9	30047 1928 2 124050961 20000 23601.294114572415 61 0 46 348 8798
+10	31975 2220 2 124050961 20000 23601.294114572415 61 0 47466 1376491 35785281681
+11	34195 2283 2 124050961 20000 23601.294114572415 61 5052 457104 23599905 9918159934445
+12	36478 2160 2 124050961 20000 23601.294114572415 61 0 3039 168889 478126763
+

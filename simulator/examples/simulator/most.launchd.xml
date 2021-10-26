@@ -1,0 +1,24 @@
+<?xml version="1.0" ?><launch>
+  <basedir path="/home/dvdmff/Documents/polimi/Thesis/simulator/simulator/examples/simulator/MoST"/>
+
+  <copy file="most.net.xml"/>
+  
+  <copy file="basic.vType.xml"/>
+  <copy file="most.parking.norerouters.add.xml"/>
+  <copy file="most.busstops.add.xml"/>
+  <copy file="most.poly.xml"/>
+  <copy file="most.parking.add.xml"/>
+  <copy file="most.trainstops.add.xml"/>
+  <copy file="most.parking.allvisible.add.xml"/>
+
+  <copy file="most.buses.flows.xml"/>
+  <copy file="most.highway.flows.xml"/>
+  <copy file="most.special.rou.xml"/>
+  <copy file="most.commercial.rou.xml"/>
+  <copy file="most.pedestrian.rou.xml"/>
+  <copy file="most.trains.flows.xml"/>
+  
+  <copy file="most.sumocfg" name="most.sumo.cfg" type="config"/>
+  
+  <seed value="42"/>
+</launch>
